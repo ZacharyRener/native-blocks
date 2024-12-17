@@ -1,14 +1,21 @@
+# Setting up local dev server
+
+ 1. Use Local by WPEngine https://wpengine.com/local/
+ 2. Create a new site, use default settings
+ 3. Browse to the site's folder
+ 4. Replace the public folder with this entire repository. Make sure its still named public
+ 5. Open the public folder in VSCode, Cursor, or whatever you use
+ 6. Browse to the sites url in your browser. make sure it's https://. Login to wordpress by adding /wp-admin to the url
+
 
 # Getting Started
+Open the terminal in VSCode with Ctrl + ~
 
+Change to the plugin folder with `cd wp-content/plugins/blocks-plugin`
 
-install the dependencies:
+then, install the dependencies: `npm install --legacy-peer-deps`
 
-    npm install --legacy-peer-deps
-
-then start the build process:
-
-    npm run start
+then start the build process: `npm run start`
 
   
 
