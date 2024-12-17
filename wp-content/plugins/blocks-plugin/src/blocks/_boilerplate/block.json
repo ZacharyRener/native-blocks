@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "blocks-plugin/boilerplate",
+	"title": "Boilerplate",
+	"textdomain": "blocks-plugin",
+	"category": "widgets",
+	"icon": "chart-line",
+	"editorScript": "blocks-plugin-editor",
+	"attributes": {
+		"isPreview": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

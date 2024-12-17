@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+// access these witht .font-[name], e.g. .font-amarante
+$font-families: (
+	amarante: (
+		"Amarante", serif
+	),
+	epilogue: (
+		"Epilogue", sans-serif
+	),
+);
+
+// access these with .text-[name], e.g. .text-heading
+$typography-sizes: (
+	heading: (
+		font-size: 50px,
+		line-height: 100%,
+	),
+	body: (
+		font-size: 16px,
+		line-height: 140%,
+		font-weight: 300
+	),
+);
+
+@each $name, $family in $font-families {
+	.font-#{$name} {
+		font-family: $family;
+	}
+}
+
+@each $size-name, $properties in $typography-sizes {
+	.text-#{$size-name} {
+		font-size: map-get($properties, font-size);
+		line-height: map-get($properties, line-height);
+		font-weight: map-get($properties, font-weight);
+		text-transform: map-get($properties, text-transform);
+	}
+}

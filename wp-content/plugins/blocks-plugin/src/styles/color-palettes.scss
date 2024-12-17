@@ -1,0 +1,17 @@
+$color-palettes: (
+	white: (
+		background: #f3f3f3,
+		text: #0d0d0d,
+	),
+	black: (
+		background: #0d0d0d,
+		text: #f3f3f3,
+	)
+);
+
+@each $palette-name, $colors in $color-palettes {
+	.palette-#{$palette-name} {
+		background-color: map-get($colors, background);
+		color: map-get($colors, text);
+	}
+  }

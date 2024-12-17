@@ -1,0 +1,28 @@
+@mixin PreviewWrapperParent( $text_domain, $block_name ) {
+	$selector: $text_domain + '-' + $block_name;
+	/**
+	 * this selector targets the outer block wrapper that has the useBlockProps classes
+	 */
+	 .wp-block-#{$selector} {
+		@content;
+	}
+}
+
+@mixin PreviewWrapperInner( $text_domain, $block_name ) {
+	$selector: $text_domain + '-' + $block_name;
+	/**
+	* this selector targets the actual output of preview.js
+	*/
+	.#{ $selector },
+	.editor-styles-wrapper .#{ $selector } { 	
+		@content;
+	}
+}
+
+@mixin PreviewWrapper( $text_domain, $block_name ) {
+	@include PreviewWrapperParent( $text_domain, $block_name ) {
+		@include PreviewWrapperInner( $text_domain, $block_name ) {
+			@content;
+		}
+	}
+}

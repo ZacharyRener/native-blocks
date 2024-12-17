@@ -1,0 +1,23 @@
+/*-----------------------------------*
+ *	BLOCK NAME: Boilerplate
+ *-----------------------------------*/
+
+/** 
+ * Primary Block Styles
+ * CHECK 1: the block name comment above should match the name of the block
+ */
+@import "../../styles/_default-styles.scss";
+
+$TEXT_DOMAIN: 'blocks-plugin';
+$BLOCK_NAME: 'boilerplate';
+/**
+ * CHECK 2: the variables above should match the block name and text domain
+ */
+
+@include PreviewWrapperParent( $TEXT_DOMAIN, $BLOCK_NAME ) {
+
+	@include PreviewWrapperInner($TEXT_DOMAIN, $BLOCK_NAME ) {
+		
+	}
+	
+} 

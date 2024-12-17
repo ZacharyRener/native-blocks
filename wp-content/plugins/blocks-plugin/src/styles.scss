@@ -1,0 +1,7 @@
+// Styles used both on frontend and within the editor
+
+[class*="wp-block-"] {
+	> * {
+		width: 100%;
+	}
+}
